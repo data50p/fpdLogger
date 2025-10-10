@@ -19,6 +19,6 @@ shift $((OPTIND-1))
 ./gradlew clean jar test installDist
 
 if [ $vflag == yes ]; then
-  git restore src/main/kotlin/femtioprocent/ansi/Version.kt
+  git restore src/main/kotlin/femtioprocent/logging/Version.kt
   git restore build-number
 fi
