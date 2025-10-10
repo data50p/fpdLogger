@@ -29,7 +29,7 @@ dependencies {
 }
 
 application {
-    mainClass = "femtioprocent.ansi.appl.AnsiDemo"
+    mainClass = "femtioprocent.logging.LogDemo"
     applicationDefaultJvmArgs = listOf("--add-opens", "java.base/jdk.internal.misc=ALL-UNNAMED")
     executableDir = "."
 }
