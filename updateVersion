@@ -10,7 +10,7 @@ fi
 
 info='$projectVersion $buildHost $buildTimestamp ($buildNumber)'
 
-cat > src/main/kotlin/femtioprocent/logger/Version.kt <<EOF
+cat > src/main/kotlin/femtioprocent/logging/Version.kt <<EOF
 package femtioprocent.logger
 
 object Version {
