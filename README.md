@@ -1,2 +1,2 @@
-# fpdLogger
-Logging support library
+# fpdAnsi
+Ansi terminal color library

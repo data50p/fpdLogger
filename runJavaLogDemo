@@ -1,0 +1,6 @@
+#!/bin/bash
+
+./gradlew install
+
+build/install/logger/logger "$@"
+

@@ -1,0 +1,7 @@
+000000000 [38;5;196mSEVERE    [00m10/10 16:46:50.066     ÷3     8 AnsiDemo                   ansiColorDemo              This is severe
+000000001 [38;5;214mWARNING   [00m10/10 16:46:50.072     ÷3     6 AnsiDemo                   ansiColorDemo              This is warning
+000000002 [38;5;226mINFO      [00m10/10 16:46:50.072     ÷3     0 AnsiDemo                   ansiColorDemo              This is info
+000000003 [38;5;40mCONFIG    [00m10/10 16:46:50.072     ÷3     0 AnsiDemo                   ansiColorDemo              This is config
+000000004 [38;5;44mFINE      [00m10/10 16:46:50.072     ÷3     0 AnsiDemo                   ansiColorDemo              This is fine
+000000005 [38;5;51mFINER     [00m10/10 16:46:50.072     ÷3     0 AnsiDemo                   ansiColorDemo              This is finer
+000000006 [38;5;123mFINEST    [00m10/10 16:46:50.073     ÷3     1 AnsiDemo                   ansiColorDemo              This is finest

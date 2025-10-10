@@ -1,0 +1,27 @@
+#!/bin/bash
+
+version=$(grep '^version ' build.gradle.kts | sed -e 's/version = //' -e 's/"//g')
+
+term=0
+if [ x$1 == x1 ]
+  then
+    term=1
+fi
+
+info='$projectVersion $buildHost $buildTimestamp ($buildNumber)'
+
+cat > src/main/kotlin/femtioprocent/logger/Version.kt <<EOF
+package femtioprocent.logger
+
+object Version {
+    fun info() : String {
+	return "$info"
+    }
+    const val projectGroup: String = "femtioprocent"
+    const val projectName: String = "logger"
+    const val projectVersion: String = "$version"
+    const val buildTimestamp: String = "$(date '+%Y-%m-%d %H:%M:%S %z')"
+    const val buildHost = "$(uname -n)"
+    const val buildNumber = "$(( $(cat build-number) + term ))"
+}
+EOF

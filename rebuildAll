@@ -1,0 +1,24 @@
+#!/bin/bash
+
+git status
+echo '..............................................................................................'
+
+term=1
+vflag=no
+while getopts "V" opt; do
+    case "${opt}" in
+        V)
+	    term=0
+	    vflag=yes
+            ;;
+    esac
+done
+shift $((OPTIND-1))
+
+./updateVersion $term
+./gradlew clean jar test installDist
+
+if [ $vflag == yes ]; then
+  git restore src/main/kotlin/femtioprocent/ansi/Version.kt
+  git restore build-number
+fi

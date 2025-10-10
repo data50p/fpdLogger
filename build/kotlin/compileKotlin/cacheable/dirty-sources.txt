@@ -1,0 +1,7 @@
+/Users/lars/project/active/PartyTalk/fpdLogger/src/main/kotlin/femtioprocent/logging/LogManager.kt
+/Users/lars/project/active/PartyTalk/fpdLogger/src/main/kotlin/femtioprocent/logging/LogDemo.kt
+/Users/lars/project/active/PartyTalk/fpdLogger/src/main/kotlin/femtioprocent/logging/MyLogger.kt
+/Users/lars/project/active/PartyTalk/fpdLogger/src/main/kotlin/femtioprocent/extentions/String.kt
+/Users/lars/project/active/PartyTalk/fpdLogger/src/main/kotlin/femtioprocent/sundry/Sundry.kt
+/Users/lars/project/active/PartyTalk/fpdLogger/src/main/kotlin/femtioprocent/extentions/Extentions.kt
+/Users/lars/project/active/PartyTalk/fpdLogger/src/main/java/femtioprocent/demo/Demo.kt
