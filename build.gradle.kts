@@ -25,6 +25,7 @@ dependencies {
     implementation(kotlin("reflect"))
     implementation(platform("io.arrow-kt:arrow-stack:2.1.0"))
     implementation("io.arrow-kt:arrow-core")
+    implementation(fileTree("lib") { include("*.jar") })
 }
 
 application {
