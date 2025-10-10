@@ -1,4 +1,4 @@
-package femtioprocent.ansi.appl
+package femtioprocent.logging
 
 import femtioprocent.logging.MyLogger
 import femtioprocent.sundry.Sundry
