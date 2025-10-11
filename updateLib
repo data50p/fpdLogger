@@ -1,0 +1,2 @@
+cp -p ../fpdAnsi/build/libs/ansi-0.0.1.0.jar lib
+ls -l lib
