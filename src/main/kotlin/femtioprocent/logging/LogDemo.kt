@@ -33,7 +33,6 @@ class LogDemo {
         MyLogger.logOut.fine("This is fine")
         MyLogger.logOut.finer("This is finer")
         MyLogger.logOut.finest("This is finest")
-        Sundry.milliSleep(100)
     }
 
 
