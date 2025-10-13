@@ -1,7 +1,7 @@
 package femtioprocent.logging
 
-import femtioprocent.sundry.Ansi
-import femtioprocent.sundry.Ansi.Color
+import femtioprocent.ansi.Ansi
+import femtioprocent.ansi.Ansi.Color
 import femtioprocent.sundry.Sundry
 import java.io.File
 import java.io.IOException
@@ -95,9 +95,9 @@ class LogManager(val name: String, val colorFun: ((String) -> String)? = null) {
 	var dateFormat: DateFormat = SimpleDateFormat("dd/MM HH:mm:ss.SSS")
     }
 
-    fun levelColor(level: Level): Color {
+    fun levelColor(level: Level): Ansi.Color {
 	return when (level) {
-	    Level.SEVERE  -> Color.R
+	    Level.SEVERE  -> Ansi.Color.R
 	    Level.WARNING -> Color.O
 	    Level.INFO    -> Color.Y
 	    Level.CONFIG  -> Color.GD

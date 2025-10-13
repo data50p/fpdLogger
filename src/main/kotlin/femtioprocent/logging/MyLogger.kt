@@ -1,7 +1,7 @@
 package femtioprocent.logging
 
-import femtioprocent.sundry.Ansi
-import femtioprocent.sundry.Ansi.Color
+import femtioprocent.ansi.Ansi
+import femtioprocent.ansi.Ansi.Color.*
 import java.util.logging.Level
 import java.util.logging.Logger
 
@@ -38,8 +38,8 @@ object MyLogger {
         return logManager.logger!!
     }
 
-    val logOut = theLogger("logOut", Ansi.colorFun(Color.Y))
-    val logMonitor = theLogger("logMonitor", Ansi.colorFun(Color.M))
+    val logOut = theLogger("logOut", Ansi.colorFun(Y))
+    val logMonitor = theLogger("logMonitor", Ansi.colorFun(M))
 
     fun isLevel(l: Level): Boolean {
         return logOut.isLoggable(l)
