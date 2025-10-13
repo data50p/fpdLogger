@@ -2,5 +2,5 @@
 
 ./gradlew install
 
-build/install/logger/logger "$@"
+build/install/logging/logging "$@"
 
