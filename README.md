@@ -5,7 +5,7 @@ I have been using this provided formatter with hi satisfaction.
 
 Typical out put looks like this
 
-
+```
  000000189 INFO      15/10 17:57:43.853    ÷42     0 PartyTalkServer            dispatchMsg0               PartyTalkConnector:measure:dispatchMsg1 ConnectorLocal 4.659260ms
  000000190 FINEST    15/10 17:57:43.853    ÷42     0 PartyTalkClient            sendMsg                    sending   done  partytalk-mqtt-bridge
  000000191 CONFIG    15/10 17:57:45.539    ÷42  1686 PartyTalkClient            getDefaultAddrType         groupSet: [MQTT-BRIDGE] -> MQTT-BRIDGE
@@ -21,3 +21,4 @@ Typical out put looks like this
                                           |________Thread id 
                     |___ date and time, incl milliseconds
 |___ Sequence number
+```
