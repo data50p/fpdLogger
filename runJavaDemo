@@ -1,0 +1,1 @@
+java -cp build/install/logging/lib/logging-0.0.1.0.jar:build/install/logging/lib/kotlin-stdlib-2.2.20.jar:build/install/logging/lib/ansi-0.0.1.0.jar    femtioprocent.demo.Demo
