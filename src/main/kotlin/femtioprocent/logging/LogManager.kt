@@ -1,8 +1,9 @@
 package femtioprocent.logging
 
 import femtioprocent.ansi.Ansi
-import femtioprocent.ansi.Ansi.Color
+import femtioprocent.ansi.Color5
 import femtioprocent.sundry.Sundry
+import java.awt.Color
 import java.io.File
 import java.io.IOException
 import java.text.DateFormat
@@ -65,7 +66,7 @@ class LogManager(val name: String, val colorFun: ((String) -> String)? = null) {
 
 	    if (true) {
 		val prefix = if (this@LogManager.colorFun != null) colorFun(this@LogManager.name) else this@LogManager.name
-		(if (this@LogManager.name == "stderr") System.err else System.out).println("$prefix ${Ansi.fg(Color.C, record.message)}")
+		(if (this@LogManager.name == "stderr") System.err else System.out).println("$prefix ${Color5.fg5(Color5.ColorValue.CYAN, record.message)}")
 	    }
 
 	    var rtV: Long? = null
@@ -79,7 +80,7 @@ class LogManager(val name: String, val colorFun: ((String) -> String)? = null) {
 	    val recordFormattedTime = dateFormat.format(Date(rtV!!))
 	    val ret = "" +
 		      Sundry.padLeft("" + sequence, 9, '0') + ' ' +
-		      Ansi.fg(levelColor(record.level), Sundry.padRight("" + record.level, 10, ' ')) +
+		    Color5.fg5(levelColor(record.level), Sundry.padRight("" + record.level, 10, ' ')) +
 		      recordFormattedTime + ' ' +
 		      Sundry.padLeft("÷$threadId", 6, ' ') + ' ' +
 		      Sundry.padLeft("" + rtD, 5, ' ') + ' ' +
@@ -95,16 +96,16 @@ class LogManager(val name: String, val colorFun: ((String) -> String)? = null) {
 	var dateFormat: DateFormat = SimpleDateFormat("dd/MM HH:mm:ss.SSS")
     }
 
-    fun levelColor(level: Level): Ansi.Color {
+    fun levelColor(level: Level): Color5.ColorValue {
 	return when (level) {
-	    Level.SEVERE  -> Ansi.Color.R
-	    Level.WARNING -> Color.O
-	    Level.INFO    -> Color.Y
-	    Level.CONFIG  -> Color.GD
-	    Level.FINE    -> Color.CD
-	    Level.FINER   -> Color.C
-	    Level.FINEST  -> Color.CL
-	    else          -> Color.W
+	    Level.SEVERE  -> Color5.ColorValue.RED
+	    Level.WARNING -> Color5.ColorValue.ORANGE
+	    Level.INFO    -> Color5.ColorValue.YELLOW
+	    Level.CONFIG  -> Color5.ColorValue.DARK_GREEN
+	    Level.FINE    -> Color5.ColorValue.DARK_CYAN
+	    Level.FINER   -> Color5.ColorValue.CYAN
+	    Level.FINEST  -> Color5.ColorValue.LIGHT_CYAN
+	    else          -> Color5.ColorValue.WHITE
 	}
     }
 

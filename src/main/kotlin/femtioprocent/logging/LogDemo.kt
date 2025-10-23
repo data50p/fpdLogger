@@ -1,8 +1,5 @@
 package femtioprocent.logging
 
-import femtioprocent.logging.MyLogger
-import femtioprocent.sundry.Sundry
-
 val lorem =
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum urna elit, viverra in eros nec, accumsan fringilla leo." +
             " Aliquam dolor sapien, gravida eu lobortis ut, ornare eu odio. Donec aliquet pharetra ligula, eu dapibus dui egestas quis." +

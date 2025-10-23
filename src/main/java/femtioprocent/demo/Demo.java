@@ -1,6 +1,5 @@
 package femtioprocent.demo;
 
-import femtioprocent.logging.LogDemo;
 import femtioprocent.logging.MyLogger;
 
 public class Demo {
