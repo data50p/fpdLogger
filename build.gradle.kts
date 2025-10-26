@@ -3,8 +3,8 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     application
-    kotlin("jvm") version "2.2.20"
-    kotlin("plugin.serialization") version "2.2.20"
+    kotlin("jvm") version "2.2.21"
+    kotlin("plugin.serialization") version "2.2.21"
 }
 
 group = "femtioprocent"
@@ -18,6 +18,7 @@ repositories {
 
 dependencies {
     testImplementation(kotlin("test"))
+/*
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.10.2")
     implementation("commons-codec:commons-codec:1.19.0")
     implementation("org.json:json:20231013")
@@ -25,6 +26,7 @@ dependencies {
     implementation(kotlin("reflect"))
     implementation(platform("io.arrow-kt:arrow-stack:2.1.0"))
     implementation("io.arrow-kt:arrow-core")
+*/
     implementation(fileTree("lib") { include("*.jar") })
 }
 
@@ -74,13 +76,13 @@ tasks.test {
 }
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_24
-    targetCompatibility = JavaVersion.VERSION_24
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
 }
 
 kotlin {
     compilerOptions {
-	jvmTarget = org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_24
+	jvmTarget = org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17
 	freeCompilerArgs.add("-Xcontext-sensitive-resolution")
 	freeCompilerArgs.add("-Xdata-flow-based-exhaustiveness")
     }
