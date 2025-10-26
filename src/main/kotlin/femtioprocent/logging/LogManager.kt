@@ -1,9 +1,7 @@
 package femtioprocent.logging
 
-import femtioprocent.ansi.Ansi
 import femtioprocent.ansi.Color5
 import femtioprocent.sundry.Sundry
-import java.awt.Color
 import java.io.File
 import java.io.IOException
 import java.text.DateFormat
@@ -79,14 +77,14 @@ class LogManager(val name: String, val colorFun: ((String) -> String)? = null) {
 
 	    val recordFormattedTime = dateFormat.format(Date(rtV!!))
 	    val ret = "" +
-		      Sundry.padLeft("" + sequence, 9, '0') + ' ' +
+		    Sundry.padLeft("" + sequence, 9, '0') + ' ' +
 		    Color5.fg5(levelColor(record.level), Sundry.padRight("" + record.level, 10, ' ')) +
-		      recordFormattedTime + ' ' +
-		      Sundry.padLeft("÷$threadId", 6, ' ') + ' ' +
-		      Sundry.padLeft("" + rtD, 5, ' ') + ' ' +
-		      Sundry.padRight("" + limited(sourceClassName, maxWidth), maxWidth, ' ') + ' ' +
-		      Sundry.padRight("" + limited(sourceMethodName, maxWidth), maxWidth, ' ') + ' ' +
-		      record.message + more + '\n'
+		    recordFormattedTime + ' ' +
+		    Sundry.padLeft("" + rtD, 5, ' ') + ' ' +
+		    Sundry.padLeft("÷$threadId", 6, ' ') + ' ' +
+		    Sundry.padRight("" + limited(sourceClassName, maxWidth), maxWidth, ' ') + ' ' +
+		    Sundry.padRight("" + limited(sourceMethodName, maxWidth), maxWidth, ' ') + ' ' +
+		    record.message + more + '\n'
 	    return ret
 
 	}
