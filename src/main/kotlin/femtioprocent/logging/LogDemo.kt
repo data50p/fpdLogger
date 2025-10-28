@@ -26,6 +26,7 @@ class LogDemo {
         MyLogger.logOut.severe("This is severe")
         MyLogger.logOut.warning("This is warning")
         MyLogger.logOut.info("This is info")
+        MyLogger.logErr.info("This is error info")
         MyLogger.logOut.config("This is config")
         MyLogger.logOut.fine("This is fine")
         MyLogger.logOut.finer("This is finer")
