@@ -1,6 +1,6 @@
-package femtioprocent.sundry
+package femtioprocent.logging
 
-import java.util.*
+import java.util.Arrays
 
 object Sundry {
     private val pad_blank = CharArray(100)

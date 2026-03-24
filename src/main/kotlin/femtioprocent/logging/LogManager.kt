@@ -1,7 +1,7 @@
 package femtioprocent.logging
 
 import femtioprocent.ansi.Color5
-import femtioprocent.sundry.Sundry
+import femtioprocent.logging.Sundry
 import java.io.File
 import java.io.IOException
 import java.text.DateFormat
