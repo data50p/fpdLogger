@@ -5,6 +5,8 @@ import java.util.logging.Level
 import java.util.logging.Logger
 
 object MyLogger {
+    var logOnStandardOutErr: Boolean = false
+
     private var logManagers: HashMap<String, LogManager> = HashMap()
 
     private var logLevel: Level = Level.INFO

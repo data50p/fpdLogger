@@ -23,6 +23,7 @@ class LogDemo {
 
         println("")
         MyLogger.logOut.level = ALL
+        MyLogger.logOnStandardOutErr = !true
         MyLogger.logOut.severe("This is severe")
         MyLogger.logOut.warning("This is warning")
         MyLogger.logOut.info("This is info")

@@ -62,7 +62,7 @@ class LogManager(val name: String, val colorFun: ((String) -> String)? = null) {
 		more.append(it)
 	    }
 
-	    if (true) {
+	    if (MyLogger.logOnStandardOutErr) {
 		val prefix = if (this@LogManager.colorFun != null) colorFun(this@LogManager.name) else this@LogManager.name
 		(if (this@LogManager.name == "stderr") System.err else System.out).println("$prefix ${Color5.fg5(Color5.ColorValue.CYAN, record.message)}")
 	    }
